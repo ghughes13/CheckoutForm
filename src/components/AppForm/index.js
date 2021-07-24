@@ -14,12 +14,12 @@ export default function AppForm({
   const [submittingForm, setSubmittingForm] = useState(false);
   const [submissionError, setSubmissionError] = useState(false);
   const [submitSuccessful, setSubmissionSuccessful] = useState(false);
-  const [relativeUrl, setRelativeUrl] = useState(window.location.href);
+  // const [relativeUrl, setRelativeUrl] = useState(window.location.href);
 
   useEffect(() => {
     let relativeURL = window.location.pathname;
 
-    setRelativeUrl(relativeURL);
+    // setRelativeUrl(relativeURL);
     console.log(window.location.href);
   }, []);
 
