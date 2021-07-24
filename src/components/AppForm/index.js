@@ -23,7 +23,7 @@ export default function AppForm({
     console.log(window.location.href);
   }, []);
 
-  const submitForm = () => {
+  const submitForm = (e) => {
     setSubmittingForm(true);
     setSubmissionError(false);
 
@@ -59,15 +59,13 @@ export default function AppForm({
       netlify-honeypot="bot-field"
       onSubmit={(e) => {
         e.preventDefault();
-        submitForm();
+        submitForm(e);
       }}
     >
-      {!submitSuccessful && explainerText && (
-        <div
-          className="explainer-text"
-          dangerouslySetInnerHTML={{ __html: explainerText }}
-        ></div>
-      )}
+      <div
+        className="explainer-text"
+        dangerouslySetInnerHTML={{ __html: explainerText }}
+      ></div>
       {submittingForm && <Loader />}
       {submitSuccessful && (
         <div className="thank-you" id="thanks">
@@ -77,18 +75,15 @@ export default function AppForm({
           </h5>
         </div>
       )}
-      {!submittingForm && !submitSuccessful ? (
-        <>
-          <input type="hidden" name="form-name" value={formName} />
-          <input type="hidden" name="bot-field" id="bot" />
-          {children}
-          <div className="button-container">
-            <button type="submit">{submitBtnText}</button>
-          </div>
-        </>
-      ) : (
-        ""
-      )}
+      <>
+        <input type="hidden" name="form-name" value={formName} />
+        <input type="hidden" name="bot-field" id="bot" />
+        {children}
+        <div className="button-container">
+          <button type="submit">{submitBtnText}</button>
+        </div>
+      </>
+
       {submissionError && (
         <p id="error-msg" className="show-error">
           Looks like there was a problem submitting your form. <br />
