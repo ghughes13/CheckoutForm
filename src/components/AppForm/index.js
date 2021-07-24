@@ -34,15 +34,17 @@ export default function AppForm({
     fetch(relativeUrl, {
       method: "POST",
       body: new FormData(formName),
-    }).then((res) => {
-      if (res.status === 200) {
-        setSubmissionSuccessful(true);
-        setSubmittingForm(false);
-      } else {
-        setSubmittingForm(false);
-        setSubmissionError(true);
-      }
-    });
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          setSubmissionSuccessful(true);
+          setSubmittingForm(false);
+        } else {
+          setSubmittingForm(false);
+          setSubmissionError(true);
+        }
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
