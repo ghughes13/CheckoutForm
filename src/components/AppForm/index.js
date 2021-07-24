@@ -48,7 +48,7 @@ export default function AppForm({
 
   return (
     <form
-      action={relativeUrl + "#thanks"}
+      action={window.location.href}
       className={"app-form " + className}
       data-category={formCategory}
       encType="multipart/form-data"
