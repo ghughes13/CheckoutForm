@@ -17,8 +17,6 @@ export default function AppForm({
   // const [relativeUrl, setRelativeUrl] = useState(window.location.href);
 
   useEffect(() => {
-    let relativeURL = window.location.pathname;
-
     // setRelativeUrl(relativeURL);
     console.log(window.location.href);
   }, []);
