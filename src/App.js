@@ -11,7 +11,7 @@ function App() {
           <h2>Credit Card Details</h2>
         </div>
         <hr className="divider" />
-        <AppForm submitBtnText="SUBMIT">
+        <AppForm submitBtnText="SUBMIT" formName="checkout-form">
           <div className="top-half-of-form form-half">
             <AppInput
               className="cardholder-name"
