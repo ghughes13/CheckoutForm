@@ -14,15 +14,13 @@ export default function AppForm({
   const [submittingForm, setSubmittingForm] = useState(false);
   const [submissionError, setSubmissionError] = useState(false);
   const [submitSuccessful, setSubmissionSuccessful] = useState(false);
-  const [relativeUrl, setRelativeUrl] = useState("/");
+  const [relativeUrl, setRelativeUrl] = useState(window.location.href);
 
   useEffect(() => {
-    let relativeURL = window.location.pathname + window.location.search;
+    let relativeURL = window.location.pathname;
 
-    if (!relativeURL.endsWith("/")) {
-      relativeURL += "/";
-    }
     setRelativeUrl(relativeURL);
+    console.log(window.location.href);
   }, []);
 
   const submitForm = () => {
@@ -31,7 +29,7 @@ export default function AppForm({
 
     const formName = document.getElementById("form-id-hook");
 
-    fetch(relativeUrl, {
+    fetch(window.location.href, {
       method: "POST",
       body: new FormData(formName),
     })
@@ -57,7 +55,7 @@ export default function AppForm({
       id="form-id-hook"
       method="POST"
       name={formName}
-      netlify
+      netlify="true"
       netlify-honeypot="bot-field"
       onSubmit={(e) => {
         e.preventDefault();
