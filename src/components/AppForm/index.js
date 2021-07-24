@@ -40,6 +40,7 @@ export default function AppForm({
           setSubmissionSuccessful(true);
           setSubmittingForm(false);
         } else {
+          console.log(res);
           setSubmittingForm(false);
           setSubmissionError(true);
         }
@@ -56,7 +57,7 @@ export default function AppForm({
       id="form-id-hook"
       method="POST"
       name={formName}
-      netlify="true"
+      netlify
       netlify-honeypot="bot-field"
       onSubmit={(e) => {
         e.preventDefault();
