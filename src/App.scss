@@ -1,0 +1,92 @@
+.App {
+  background-color: #373737;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #363535;
+  font-family: "Roboto", sans-serif;
+
+  h1 {
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  hr {
+    margin-top: 10px;
+  }
+
+  span {
+    display: block;
+    margin: 5px 10px;
+  }
+
+  .form-container {
+    background: #f9f9f9;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: solid #3bb99b 5px;
+    max-width: 60vw;
+    padding-bottom: 0;
+    position: relative;
+  }
+
+  .formHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .form-half {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-half > div {
+    flex-basis: 45%;
+  }
+
+  .form-half .cardholder-name {
+    flex-basis: 60%;
+  }
+
+  .form-half .expiration-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+  }
+
+  .expiration-info input {
+    width: 50px;
+  }
+
+  .expiration-info label {
+    width: 100%;
+  }
+
+  #error-msg {
+    font-size: 16px;
+    color: red;
+  }
+
+  .divider {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}

@@ -1,0 +1,17 @@
+.app-input {
+  input {
+    border-radius: 10px;
+    border: solid #d5d5d5 1px;
+    margin-bottom: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #877d88;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+  }
+
+  #placeholder {
+    color: #b5b5b5;
+  }
+}

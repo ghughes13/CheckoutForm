@@ -1,0 +1,51 @@
+.app-form {
+  border-radius: 30px;
+  padding: 10px 100px 40px;
+
+  .explainer-text {
+    margin-bottom: 50px;
+  }
+
+  .button-container {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    width: 100%;
+    left: 0px;
+    bottom: -75px;
+  }
+
+  button {
+    margin-top: 25px;
+    text-align: center;
+    color: white;
+    padding: 15px 62px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    background: #3bb99b;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  #error-msg {
+    display: block;
+    text-align: center;
+  }
+
+  #thanks {
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  @media screen and (max-width: 767px) {
+    border-radius: 30px;
+    padding: 40px 20px;
+
+    h3 {
+      font-size: 26px;
+    }
+  }
+}
